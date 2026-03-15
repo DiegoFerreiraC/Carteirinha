@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="carteirinha.css">
+
+<title>Carteirinha SINSEMUC</title>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<!-- FORMULÁRIO -->
+
+<div class="form">
+
+<label>Afiliado</label>
+<input id="nome" type="text">
+
+<label>CPF</label>
+<input id="cpf" type="text" maxlength="11">
+
+<label>Cad</label>
+<input id="cad" type="text">
+
+<label id="labelData">Validade</label>
+<input id="validade" type="date">
+
+<div id="dependentesContainer">
+
+<label>Dependente 1</label>
+<input type="text" class="dependenteNome" placeholder="Nome do dependente">
+
+<label>Nascimento</label>
+<input type="date" class="dependenteNascimento">
+
+</div>
+
+<label>Foto</label>
+<input id="foto" type="file" accept="image/*">
+
+<button class="btn" id="gerar">Atualizar preview</button>
+<button class="btn secondary" id="imprimir">Imprimir</button>
+<button class="btn secondary" id="trocarModelo">Trocar modelo</button>
+
+</div>
+
+<!-- CARTÃO -->
+
+<div class="print-area">
+
+<div class="carteira">
+
+<!-- LADO ESQUERDO -->
+
+<div class="lado">
+
+<div class="conteudo">
+
+<div class="cabecalho">
+
+<div class="logo">
+<img src="imagens/LOGO.png">
+</div>
+
+<div class="info-sindicato">
+
+<div class="titulo">SINSEMUC</div>
+<div>Sindicato dos Servidores</div>
+<div>Municipais de Cacoal</div>
+<div>Fone:(69)3443-2211</div>
+
+<div id="tipoCarteira" class="tipoCarteira">EDUCADOR</div>
+
+</div>
+
+</div>
+
+<div class="dados">
+
+Afiliado: <u id="nomeText">---</u><br>
+
+<div style="display:inline-block;margin-right:10px;">
+CPF: <u id="cpfText">---</u>
+</div>
+
+<div style="display:inline-block;">
+Cad: <u id="cadText">---</u>
+</div>
+
+</div>
+
+<div class="foto">
+
+<img id="photoImg" style="display:none;">
+<div id="photoFallback">Sem foto</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LADO DIREITO -->
+
+<div class="lado">
+
+<div class="conteudo">
+
+<!-- MODELO NORMAL -->
+
+<div class="modelo modelo1">
+
+<div class="titulo-direito">
+Carteira válida até <span id="validText">---</span>
+</div>
+
+<table id="tabelaDependentes">
+
+<tr>
+<th>DEPENDENTES</th>
+<th>D. NASCIMENTO</th>
+</tr>
+
+</table>
+
+</div>
+
+<!-- MODELO EDUCADOR -->
+
+<div class="modelo modelo2">
+
+<div class="lei">
+Lei Estadual Nº 1.630 de 18/05/2006
+</div>
+
+<p class="textoLei">
+
+Art. 1º. Fica instituído no Estado de Rondônia
+a meia entrada para professores, em casas
+de espetáculos, estádios, ginásios e demais
+estabelecimentos de lazer.
+
+</p>
+
+<div class="assinatura">
+
+_____________________
+
+<div>Assinatura</div>
+
+</div>
+
+<div class="rodapeLei">
+
+expedição: <span id="expedicaoText">---</span>
+
+<span>Validade: 4 anos</span>
+
+</div>
+
+<img class="logoFundo" src="imagens/LOGO.png">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

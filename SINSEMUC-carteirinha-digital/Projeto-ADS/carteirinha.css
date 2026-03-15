@@ -1,0 +1,307 @@
+/* ===================== */
+/* CONFIGURAÇÃO GLOBAL   */
+/* ===================== */
+
+body {
+  font-family: "Times New Roman", Helvetica, sans-serif;
+  margin: 10px;
+}
+
+.wrap {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ===================== */
+/* FORMULÁRIO            */
+/* ===================== */
+
+.form {
+  width: 360px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.form label {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #2b6cb0;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.secondary {
+  background: #718096;
+  margin-left: 8px;
+}
+
+/* ===================== */
+/* CARTEIRINHA (LAYOUT)  */
+/* ===================== */
+
+.carteira {
+  display: flex;
+  width: 1000px;
+  height: 320px;
+  background: #fff;
+  border: 14px solid black;
+  box-sizing: border-box;
+}
+
+.lado {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.lado:first-child {
+  width: calc(49%);
+}
+
+.lado:last-child {
+  width: calc(51%);
+}
+
+/* divisor central */
+
+.lado + .lado {
+  border-left: 20px solid black;
+  outline: 7px solid yellow;
+  outline-offset: -21px;
+}
+
+/* ===================== */
+/* CONTEÚDO INTERNO      */
+/* ===================== */
+
+.conteudo {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 7px solid black;
+  outline: 7px solid yellow;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ===================== */
+/* CABEÇALHO             */
+/* ===================== */
+
+.cabecalho {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  width: 80px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  transform: scale(3);
+  padding-left: 13px;
+  padding-top: 16px;
+  display: block;
+}
+
+/* TEXTOS DO SINDICATO */
+
+.info-sindicato div:not(.titulo):not(.tipoCarteira) {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 185px;
+}
+
+.titulo {
+  font-size: 45px;
+  font-weight: bold;
+  color: #1e4c9a;
+  padding-left: 170px;
+  margin-right: 110px;
+}
+
+/* ===================== */
+/* TEXTO EDUCADOR        */
+/* ===================== */
+
+.tipoCarteira {
+  display: none;
+  background: yellow;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin-left: 185px;
+  margin-top: 8px;
+  width: max-content;
+  font-size: 18px;
+}
+
+.carteira.modeloEducador .tipoCarteira {
+  display: inline-block;
+}
+
+/* ===================== */
+/* DADOS AFILIADO        */
+/* ===================== */
+
+.dados {
+  padding-top: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dados #nomeText {
+  display: inline-block;
+  max-width: 230px;
+  word-wrap: break-word;
+}
+
+/* ajuste no modelo educador */
+
+.carteira.modeloEducador .dados {
+  padding-top: 55px;
+  padding-left: 12px;
+  font-size: 17px;
+}
+
+/* ===================== */
+/* FOTO PADRONIZADA      */
+/* ===================== */
+
+.foto {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 105px;
+  height: 125px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================== */
+/* TABELA DEPENDENTES    */
+/* ===================== */
+
+.titulo-direito {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table, th, td {
+  border: 0.5px solid black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+th {
+  background: #ddd;
+  text-align: center;
+}
+
+td {
+  padding: 6px;
+}
+
+/* ===================== */
+/* CONTROLE DE MODELOS   */
+/* ===================== */
+
+.modelo {
+  display: none;
+}
+
+.modelo1 {
+  display: block;
+}
+
+.carteira.modeloEducador .modelo1 {
+  display: none;
+}
+
+.carteira.modeloEducador .modelo2 {
+  display: block;
+}
+
+/* ===================== */
+/* MODELO EDUCADOR       */
+/* ===================== */
+
+.lei {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.textoLei {
+  text-align: center;
+  font-size: 17px;
+  margin: 25px 60px;
+  line-height: 1.35;
+}
+
+.assinatura {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.rodapeLei {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-weight: bold;
+}
+
+/* ===================== */
+/* LOGO TRANSPARENTE     */
+/* ===================== */
+
+.logoFundo {
+  position: absolute;
+  opacity: 0.18;
+  width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
