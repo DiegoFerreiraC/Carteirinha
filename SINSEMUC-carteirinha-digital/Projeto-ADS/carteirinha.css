@@ -176,6 +176,18 @@ body {
   font-weight: bold;
 }
 
+/* ✅ NOVA CLASSE (única adição) */
+.linhaAfiliado {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.linhaAfiliado u {
+  max-width: 230px;
+  word-break: break-word;
+}
+
 .dados #nomeText {
   display: inline-block;
   max-width: 230px;
@@ -285,11 +297,15 @@ td {
   margin-top: 25px;
 }
 
+/* ✅ ALTERAÇÃO AQUI (expedição) */
 .rodapeLei {
   display: flex;
-  justify-content: space-between;
   padding: 15px 30px;
   font-weight: bold;
+}
+
+.rodapeLei span:last-child {
+  margin-left: auto;
 }
 
 /* ===================== */
